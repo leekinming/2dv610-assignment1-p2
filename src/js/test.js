@@ -96,3 +96,36 @@ describe('makerandomarray', function () {
     assert.equal(newgame.photonumber.length, 16)
   })
 })
+
+describe('drawgameboard', function () {
+  it('the total number of element img should be 16', function () {
+    var newgame = new memorygame()
+    newgame.generatenumberphoto()
+    newgame.drawgameboard()
+    const gameboardlocation = newgame.shadowRoot.querySelector('#gameboard').getElementsByTagName('img')
+    assert.equal(gameboardlocation.length, 16)
+  })
+})
+
+describe('drawgameboard', function () {
+  it('the total number of element br should be 4 if the size of game board is default', function () {
+    var newgame = new memorygame()
+    newgame.generatenumberphoto()
+    newgame.drawgameboard()
+    const gameboardlocation = newgame.shadowRoot.querySelector('#gameboard').getElementsByTagName('br')
+    const totalbrelement = newgame.long
+    assert.equal(gameboardlocation.length, totalbrelement)
+  })
+})
+
+describe('drawgameboard', function () {
+  it('the total number of element br should be 3 if the width is 4 and long 3', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('long', 4, 3)
+    newgame.generatenumberphoto()
+    newgame.drawgameboard()
+    const gameboardlocation = newgame.shadowRoot.querySelector('#gameboard').getElementsByTagName('br')
+    const totalbrelement = newgame.long
+    assert.equal(gameboardlocation.length, totalbrelement)
+  })
+})
