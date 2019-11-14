@@ -67,3 +67,32 @@ describe('generatenumberphoto', function () {
     assert.equal(newgame.photonumber.length, 8)
   })
 })
+
+describe('makerandomarray', function () {
+  it('change the order of array', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('width', 4, 2)
+    newgame.attributeChangedCallback('long', 4, 2)
+    newgame.generatenumberphoto()
+    var origanalarray = [1, 1, 2, 2]
+    newgame.makerandomarray()
+    let issame = true
+    let j = 0
+    for (let i = 0; i < newgame.photonumber.length; i++) {
+      if (newgame.photonumber[i] !== origanalarray[j]) {
+        issame = false
+      }
+      j++
+    }
+    if (!issame) { assert.equal(true, true) } else { assert.fail() }
+  })
+})
+
+describe('makerandomarray', function () {
+  it('the length should not been change', function () {
+    var newgame = new memorygame()
+    newgame.generatenumberphoto()
+    newgame.makerandomarray()
+    assert.equal(newgame.photonumber.length, 16)
+  })
+})

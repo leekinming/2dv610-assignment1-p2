@@ -25,6 +25,7 @@ class memorygame extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true))
     this.totalnumberofphoto = 0
     this.photonumber = []
+    this.origanalphotonumber = []
     this.temp = 0
     this.selectedid1 = null
     this.selectedid2 = null
@@ -36,13 +37,26 @@ class memorygame extends HTMLElement {
     for (let i = 1; i <= (this.long * this.width) / 2; i++) {
       this.photonumber.push(i)
       this.photonumber.push(i)
+      this.origanalphotonumber.push(i)
+      this.origanalphotonumber.push(i)
     }
   }
 
   makerandomarray () {
-    this.photonumber.sort(function (a, b) {
-      return Math.floor(Math.random() * 3 - 1)
-    })
+    let issame = true
+    while (issame) {
+      this.photonumber.sort(function (a, b) {
+        return Math.floor(Math.random() * 3 - 1)
+      })
+
+      let j = 0
+      for (let i = 0; i < this.photonumber.length; i++) {
+        if (this.photonumber[i] !== this.origanalphotonumber[j]) {
+          issame = false
+        }
+        j++
+      }
+    }
   }
 
   static get observedAttributes () {
