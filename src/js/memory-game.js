@@ -34,5 +34,3 @@ class memorygame extends HTMLElement {
 }
 
 window.customElements.define('memory-board', memorygame)
-
-export { memorygame as Memorygame }

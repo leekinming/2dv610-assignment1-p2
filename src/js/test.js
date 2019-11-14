@@ -1,9 +1,9 @@
-/* import { Memorygame } from '../js/memory-game.js'
-
-var newgame = new Memorygame()
-
-newgame.generatenumberphoto() */
+// import { Memorygame } from '../js/memory-game.js'
 var assert = chai.assert
+
+var newgame = new memorygame()
+
+// newgame.generatenumberphoto()
 
 describe('Array', function () {
   it('should start empty', function () {
