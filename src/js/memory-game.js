@@ -59,6 +59,21 @@ class memorygame extends HTMLElement {
     }
   }
 
+  drawgameboard () {
+    const shadowRootlocation = this.shadowRoot.querySelector('#gameboard')
+    const long = this.long
+    this.photonumber.forEach(function (number, index) {
+      const img = document.createElement('img')
+      img.setAttribute('src', 'image/0.png')
+      img.setAttribute('value', index)
+      shadowRootlocation.appendChild(img)
+
+      if ((index + 1) % long === 0) {
+        shadowRootlocation.appendChild(document.createElement('br'))
+      }
+    })
+  }
+
   static get observedAttributes () {
     return ['long', 'width']
   }
