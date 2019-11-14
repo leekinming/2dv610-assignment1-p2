@@ -37,7 +37,9 @@ class memorygame extends HTMLElement {
       this.photonumber.push(i)
       this.photonumber.push(i)
     }
+  }
 
+  makerandomarray () {
     this.photonumber.sort(function (a, b) {
       return Math.floor(Math.random() * 3 - 1)
     })

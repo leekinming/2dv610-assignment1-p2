@@ -50,3 +50,20 @@ describe('attributeChangedCallback', function () {
     assert.equal(newgame.long, 4)
   })
 })
+
+describe('generatenumberphoto', function () {
+  it('For default size the length of array should be 16', function () {
+    var newgame = new memorygame()
+    newgame.generatenumberphoto()
+    assert.equal(newgame.photonumber.length, 16)
+  })
+})
+
+describe('generatenumberphoto', function () {
+  it('change the size of gameboard', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('width', 4, 2)
+    newgame.generatenumberphoto()
+    assert.equal(newgame.photonumber.length, 8)
+  })
+})
