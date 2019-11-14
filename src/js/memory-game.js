@@ -32,6 +32,17 @@ class memorygame extends HTMLElement {
     this.pairdone = 0
   }
 
+  generatenumberphoto () {
+    for (let i = 1; i <= (this.long * this.width) / 2; i++) {
+      this.photonumber.push(i)
+      this.photonumber.push(i)
+    }
+
+    this.photonumber.sort(function (a, b) {
+      return Math.floor(Math.random() * 3 - 1)
+    })
+  }
+
   static get observedAttributes () {
     return ['long', 'width']
   }
