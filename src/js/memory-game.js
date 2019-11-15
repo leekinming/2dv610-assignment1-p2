@@ -103,7 +103,7 @@ class memorygame extends HTMLElement {
     this.generatenumberphoto()
     this.drawgameboard()
     this.makerandomarray()
-    this.shadowRoot.querySelector('#gameboard').addEventListener('click', this.checkuserselection(event))
+    this.shadowRoot.querySelector('#gameboard').addEventListener('click', (event) => { this.checkuserselection(event) })
   }
 
   /**
