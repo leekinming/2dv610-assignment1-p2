@@ -196,3 +196,59 @@ describe('checktheanswer', function () {
     assert.equal(select2.getAttribute('src'), 'image/0.png')
   })
 })
+
+describe('checkuserselection', function () {
+  it('when user choose Done.png it should return false', function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/Done.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    const actual = newgame.checkuserselection(newevent)
+    assert.equal(actual, false)
+    assert.equal(newgame.selectedid1, null)
+    assert.equal(newgame.selectedid2, null)
+  })
+})
+
+describe('checkuserselection', function () {
+  it('if user choose same option, selectedid2 will not be definded', function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/Done.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    newgame.selectedid1 = newevent.target
+    newgame.checkuserselection(newevent)
+    assert.equal(newgame.selectedid2, null)
+  })
+})
+
+describe('checkuserselection', function () {
+  it('if user choose different, value turns should add one', function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/0.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    newgame.selectedid1 = 123
+    newgame.checkuserselection(newevent)
+    assert.equal(newgame.turns, 1)
+  })
+})
+
+describe('checkuserselection', async function () {
+  it('after check, selectedid1 and selectedid2 should be reseted', async function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/0.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    newgame.selectedid1 = 123
+    newgame.checkuserselection(newevent)
+    setTimeout(() => {
+      assert.equal(newgame.selectedid1, null)
+      assert.equal(newgame.selectedid2, null)
+    }, 300)
+  })
+})

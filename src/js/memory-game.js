@@ -74,8 +74,12 @@ class memorygame extends HTMLElement {
     })
   }
 
+  /**
+   *
+   * @param {Event} event
+   */
   checkuserselection (event) {
-    if (event.target.getAttribute('src') === 'image/Done.png') { return }
+    if (event.target.getAttribute('src') === 'image/Done.png') { return false }
     event.target.setAttribute('src', `image/${this.photonumber[event.target.getAttribute('value')]}.png`)
     if (this.selectedid2) { return }
     if (this.selectedid1 === null) {
@@ -95,6 +99,11 @@ class memorygame extends HTMLElement {
     }
   }
 
+  /**
+   *
+   * @param {HTMLElement} select1
+   * @param {HTMLElement} select2
+   */
   checktheanswer (select1, select2) {
     if (this.photonumber[select1.getAttribute('value')] === this.photonumber[select2.getAttribute('value')]) {
       select1.classList.add('removed')
