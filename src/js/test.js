@@ -129,3 +129,70 @@ describe('drawgameboard', function () {
     assert.equal(gameboardlocation.length, totalbrelement)
   })
 })
+
+describe('checktheanswer', function () {
+  it('it should add new class to those html tag', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 0)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 1)
+    newgame.photonumber = [1, 1]
+    newgame.checktheanswer(select1, select2)
+    assert.equal(select1.classList[0], 'removed')
+    assert.equal(select2.classList[0], 'removed')
+  })
+})
+
+describe('checktheanswer', function () {
+  it('it should not add new class to those html tag', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 0)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 1)
+    newgame.photonumber = [1, 2]
+    newgame.checktheanswer(select1, select2)
+    assert.equal(select1.classList.length, 0)
+    assert.equal(select2.classList.length, 0)
+  })
+})
+
+describe('checktheanswer', function () {
+  it('the value pairdone add one when the two choose is same', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 2)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 2)
+    newgame.checktheanswer(select1, select2)
+    assert.equal(newgame.pairdone, 1)
+  })
+})
+
+describe('checktheanswer', function () {
+  it('it should not change the value of pairdone when thoes chooses is not match', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 0)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 1)
+    newgame.photonumber = [1, 2]
+    newgame.checktheanswer(select1, select2)
+    assert.equal(newgame.pairdone, 0)
+  })
+})
+
+describe('checktheanswer', function () {
+  it('when those select is not match, it should setsrc equire image/0.png', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 0)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 1)
+    newgame.photonumber = [1, 2]
+    newgame.checktheanswer(select1, select2)
+    assert.equal(select1.getAttribute('src'), 'image/0.png')
+    assert.equal(select2.getAttribute('src'), 'image/0.png')
+  })
+})
