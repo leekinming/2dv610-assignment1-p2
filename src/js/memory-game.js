@@ -128,10 +128,10 @@ class memorygame extends HTMLElement {
 
   attributeChangedCallback (name, oldvalue, newvalue) {
     if (name === 'long') {
-      if (newvalue <= 4) { this.long = newvalue }
+      if (newvalue <= 4 && newvalue > 0) { this.long = newvalue }
     }
     if (name === 'width') {
-      if (newvalue <= 4) { this.width = newvalue }
+      if (newvalue <= 4 && newvalue > 0) { this.width = newvalue }
     }
   }
 }
