@@ -12,6 +12,26 @@ describe('attributeChangedCallback', function () {
 })
 
 describe('attributeChangedCallback', function () {
+  it('when set long smaller than 0, should not change the default size', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('long', 4, -100)
+
+    assert.equal(newgame.long, 4)
+    assert.equal(newgame.width, 4)
+  })
+})
+
+describe('attributeChangedCallback', function () {
+  it('when set width smaller than 0, should not change the default size', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('width', 4, -100)
+
+    assert.equal(newgame.long, 4)
+    assert.equal(newgame.width, 4)
+  })
+})
+
+describe('attributeChangedCallback', function () {
   it('when set long <= 4, should change long to 2', function () {
     var newgame = new memorygame()
     newgame.attributeChangedCallback('long', 4, 2)
