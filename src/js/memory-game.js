@@ -74,6 +74,27 @@ class memorygame extends HTMLElement {
     })
   }
 
+  checkuserselection (event) {
+    if (event.target.getAttribute('src') === 'image/Done.png') { return }
+    event.target.setAttribute('src', `image/${this.photonumber[event.target.getAttribute('value')]}.png`)
+    if (this.selectedid2) { return }
+    if (this.selectedid1 === null) {
+      this.selectedid1 = event.target
+    } else {
+      if (event.target === this.selectedid1) { return }
+      this.turns += 1
+      this.selectedid2 = event.target
+      setTimeout(() => {
+        this.checktheanswer(this.selectedid1, this.selectedid2)
+        this.selectedid1 = null
+        this.selectedid2 = null
+        if (this.pairdone === (this.width * this.long) / 2) {
+          console.log('you won')
+        }
+      }, 300)
+    }
+  }
+
   checktheanswer (select1, select2) {
     if (this.photonumber[select1.getAttribute('value')] === this.photonumber[select2.getAttribute('value')]) {
       select1.classList.add('removed')
