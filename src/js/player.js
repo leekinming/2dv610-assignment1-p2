@@ -6,4 +6,8 @@ class player {
   getplayername () {
     return this.name
   }
+
+  setplayername (newname) {
+    this.name = newname
+  }
 }
