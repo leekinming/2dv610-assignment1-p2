@@ -32,6 +32,19 @@ class memorygame extends HTMLElement {
     this.turns = 0
     this.pairdone = 0
   }
+
+  static get observedAttributes () {
+    return ['long', 'width']
+  }
+
+  attributeChangedCallback (name, oldvalue, newvalue) {
+    if (name === 'long') {
+      this.long = newvalue
+    }
+    if (name === 'width') {
+      this.width = newvalue
+    }
+  }
 }
 
 window.customElements.define('memory-board', memorygame)
