@@ -20,7 +20,7 @@ describe('memory-game attributeChangedCallback', function () {
 })
 
 describe('memory-game attributeChangedCallback', function () {
-  it('the new value cannot be large then 4', function () {
+  it('the long value cannot be large then 16', function () {
     var newgame = new memorygame()
     newgame.attributeChangedCallback('long', 4, 100)
     assert.equal(newgame.long, 4)
@@ -38,7 +38,7 @@ describe('memory-game attributeChangedCallback', function () {
 })
 
 describe('memory-game attributeChangedCallback', function () {
-  it('the new value cannot be small then 1', function () {
+  it('the long value cannot be small then 1', function () {
     var newgame = new memorygame()
     newgame.attributeChangedCallback('long', 4, 0)
     assert.equal(newgame.long, 4)
