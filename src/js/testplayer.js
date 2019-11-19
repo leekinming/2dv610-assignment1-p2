@@ -20,3 +20,11 @@ describe('player constructor', function () {
     assert.equal(newplayer.getplayername(), '!@#$% %$$#?":{}')
   })
 })
+
+describe('player setplayername', function () {
+  it('it will return the name angus', function () {
+    var newplayer = new player()
+    newplayer.setplayername('angus')
+    assert.equal(newplayer.getplayername(), 'angus')
+  })
+})
