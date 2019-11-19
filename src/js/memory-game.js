@@ -31,6 +31,7 @@ class memorygame extends HTMLElement {
     this.selectedid2 = null
     this.turns = 0
     this.pairdone = 0
+    this.playername = new player()
   }
 
   static get observedAttributes () {
