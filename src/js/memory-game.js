@@ -42,7 +42,7 @@ class memorygame extends HTMLElement {
       if (newvalue <= 16 && newvalue > 0) { this.long = newvalue }
     }
     if (name === 'width') {
-      this.width = newvalue
+      if (newvalue <= 16) { this.width = newvalue }
     }
   }
 }
