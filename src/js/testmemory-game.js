@@ -9,3 +9,12 @@ describe('memory-game constructor', function () {
     }
   })
 })
+
+describe('memory-game attributeChangedCallback', function () {
+  it('it will not change anything when the name is not long or width', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('abcde', 4, 3)
+    assert.equal(newgame.long, 4)
+    assert.equal(newgame.width, 4)
+  })
+})
