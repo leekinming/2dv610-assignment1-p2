@@ -63,3 +63,21 @@ describe('memory-game attributeChangedCallback', function () {
     assert.equal(newgame.width, 4)
   })
 })
+
+describe('memory-game attributeChangedCallback', function () {
+  it('the width value will change to 3', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('width', 4, 3)
+    assert.equal(newgame.long, 4)
+    assert.equal(newgame.width, 3)
+  })
+})
+
+describe('memory-game attributeChangedCallback', function () {
+  it('the width value cannot small then 1', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('width', 4, 0)
+    assert.equal(newgame.long, 4)
+    assert.equal(newgame.width, 4)
+  })
+})
