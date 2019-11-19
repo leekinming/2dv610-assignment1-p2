@@ -13,3 +13,10 @@ describe('constructor', function () {
     assert.equal(newplayer.getplayername(), 'Player')
   })
 })
+
+describe('constructor', function () {
+  it('it can handle different kinds of sysbal', function () {
+    var newplayer = new player('!@#$% %$$#?":{}')
+    assert.equal(newplayer.getplayername(), '!@#$% %$$#?":{}')
+  })
+})
