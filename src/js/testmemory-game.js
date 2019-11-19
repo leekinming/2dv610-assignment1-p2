@@ -49,9 +49,10 @@ describe('memory-game attributeChangedCallback', function () {
 describe('memory-game attributeChangedCallback', function () {
   it('the long value will change to 16', function () {
     var newgame = new memorygame()
+    newgame.attributeChangedCallback('width', 4, 1)
     newgame.attributeChangedCallback('long', 4, 16)
     assert.equal(newgame.long, 16)
-    assert.equal(newgame.width, 4)
+    assert.equal(newgame.width, 1)
   })
 })
 
