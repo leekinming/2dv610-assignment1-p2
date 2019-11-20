@@ -91,3 +91,11 @@ describe('memory-game attributeChangedCallback', function () {
     assert.equal(newgame.width, 4)
   })
 })
+
+describe('memory-game generatenumberphoto', function () {
+  it('the size of photonumber should be 16', function () {
+    var newgame = new memorygame()
+    newgame.generatenumberphoto()
+    assert.equal(newgame.photonumber.length, 16)
+  })
+})
