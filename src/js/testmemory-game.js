@@ -99,3 +99,19 @@ describe('memory-game generatenumberphoto', function () {
     assert.equal(newgame.photonumber.length, 16)
   })
 })
+
+describe('memory-game generatenumberphoto', function () {
+  it('it contain correct element', function () {
+    var newgame = new memorygame()
+    newgame.long = 2
+    newgame.width = 2
+    newgame.generatenumberphoto()
+    let begin = 1
+    for (let i = 0; i < newgame.photonumber.length; i = i + 2) {
+      if (newgame.photonumber[i] !== begin || newgame.photonumber[i + 1] !== begin) {
+        assert.fail()
+      }
+      begin++
+    }
+  })
+})
