@@ -34,6 +34,15 @@ class memorygame extends HTMLElement {
     this.playername = new player()
   }
 
+  generatenumberphoto () {
+    for (let i = 1; i <= (this.long * this.width) / 2; i++) {
+      this.photonumber.push(i)
+      this.photonumber.push(i)
+      this.origanalphotonumber.push(i)
+      this.origanalphotonumber.push(i)
+    }
+  }
+
   static get observedAttributes () {
     return ['long', 'width']
   }
