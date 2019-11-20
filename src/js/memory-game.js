@@ -43,6 +43,12 @@ class memorygame extends HTMLElement {
     }
   }
 
+  makerandomarray () {
+    this.photonumber.sort(function (a, b) {
+      return Math.floor(Math.random() * 3 - 1)
+    })
+  }
+
   static get observedAttributes () {
     return ['long', 'width']
   }
