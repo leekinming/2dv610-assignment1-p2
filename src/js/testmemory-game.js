@@ -115,3 +115,24 @@ describe('memory-game generatenumberphoto', function () {
     }
   })
 })
+
+describe('memory-game makerandomarray', function () {
+  it('it make randomize the array element', function () {
+    var newgame = new memorygame()
+    newgame.long = 2
+    newgame.width = 2
+    newgame.generatenumberphoto()
+    const origanal = [1, 1, 2, 2]
+    newgame.makerandomarray()
+    let j = 0
+    console.log(newgame.photonumber)
+    for (let i = 0; i < newgame.photonumber.length; i++) {
+      console.log(newgame.photonumber[i])
+      console.log(origanal[j])
+      if (newgame.photonumber[i] === origanal[j]) {
+        assert.fail()
+      }
+      j++
+    }
+  })
+})
