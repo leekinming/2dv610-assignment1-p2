@@ -123,16 +123,15 @@ describe('memory-game makerandomarray', function () {
     newgame.width = 2
     newgame.generatenumberphoto()
     const origanal = [1, 1, 2, 2]
-    newgame.makerandomarray()
-    let j = 0
+    // newgame.makerandomarray()
     console.log(newgame.photonumber)
+    let j = 0
     for (let i = 0; i < newgame.photonumber.length; i++) {
-      console.log(newgame.photonumber[i])
-      console.log(origanal[j])
-      if (newgame.photonumber[i] === origanal[j]) {
-        assert.fail()
+      if (newgame.photonumber[i] !== origanal[j]) {
+        assert.isOk(newgame)
       }
       j++
     }
+    assert.fail()
   })
 })
