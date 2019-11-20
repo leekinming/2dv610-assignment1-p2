@@ -44,9 +44,20 @@ class memorygame extends HTMLElement {
   }
 
   makerandomarray () {
-    this.photonumber.sort(function (a, b) {
-      return Math.floor(Math.random() * 3 - 1)
-    })
+    let issame = true
+    while (issame) {
+      this.photonumber.sort(function (a, b) {
+        return Math.floor(Math.random() * 3 - 1)
+      })
+
+      let j = 0
+      for (let i = 0; i < this.photonumber.length; i++) {
+        if (this.photonumber[i] !== this.origanalphotonumber[j]) {
+          issame = false
+        }
+        j++
+      }
+    }
   }
 
   static get observedAttributes () {
