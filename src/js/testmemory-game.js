@@ -175,3 +175,19 @@ describe('memory-game checkuserselection', function () {
     assert.equal(newgame.turns, 1)
   })
 })
+
+describe('memory-game checkuserselection', async function () {
+  it('after check, selectedid1 and selectedid2 should be reseted', async function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/0.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    newgame.selectedid1 = 123
+    newgame.checkuserselection(newevent)
+    setTimeout(() => {
+      assert.equal(newgame.selectedid1, null)
+      assert.equal(newgame.selectedid2, null)
+    }, 300)
+  })
+})
