@@ -191,3 +191,17 @@ describe('memory-game checkuserselection', async function () {
     }, 300)
   })
 })
+
+describe('memory-game checktheanswer', function () {
+  it('it should add new class to those html tag if two selection is match', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 0)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 1)
+    newgame.photonumber = [1, 1]
+    newgame.checktheanswer(select1, select2)
+    assert.equal(select1.classList[0], 'removed')
+    assert.equal(select2.classList[0], 'removed')
+  })
+})
