@@ -244,3 +244,31 @@ describe('memory-game checktheanswer', function () {
     assert.equal(newgame.pairdone, 0)
   })
 })
+
+describe('memory-game checktheanswer', function () {
+  it('when those select is not match, it should setsrc equire image/0.png', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 0)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 1)
+    newgame.photonumber = [1, 2]
+    newgame.checktheanswer(select1, select2)
+    assert.equal(select1.getAttribute('src'), 'image/0.png')
+    assert.equal(select2.getAttribute('src'), 'image/0.png')
+  })
+})
+
+describe('memory-game checkuserselection', function () {
+  it('when user choose Done.png it should return false', function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/Done.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    const actual = newgame.checkuserselection(newevent)
+    assert.equal(actual, false)
+    assert.equal(newgame.selectedid1, null)
+    assert.equal(newgame.selectedid2, null)
+  })
+})
