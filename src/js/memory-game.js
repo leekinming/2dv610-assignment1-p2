@@ -90,7 +90,7 @@ class memorygame extends HTMLElement {
         this.selectedid1 = null
         this.selectedid2 = null
         if (this.pairdone === (this.width * this.long) / 2) {
-          console.log('you won')
+          console.log(`${this.playername.getplayername()} won`)
         }
       }, 300)
     }
