@@ -31,7 +31,7 @@ class memorygame extends HTMLElement {
     this.selectedid2 = null
     this.turns = 0
     this.pairdone = 0
-    // this.playername = new player()
+    this.playername = new player()
   }
 
   generatenumberphoto () {
@@ -115,7 +115,7 @@ class memorygame extends HTMLElement {
   }
 
   static get observedAttributes () {
-    return ['long', 'width']
+    return ['long', 'width', 'playername']
   }
 
   attributeChangedCallback (name, oldvalue, newvalue) {
@@ -124,6 +124,9 @@ class memorygame extends HTMLElement {
     }
     if (name === 'width') {
       if (newvalue <= 16 && newvalue > 0 && this.long * newvalue <= 16) { this.width = newvalue }
+    }
+    if (name === 'playername') {
+      this.playername.setplayername(newvalue)
     }
   }
 }
