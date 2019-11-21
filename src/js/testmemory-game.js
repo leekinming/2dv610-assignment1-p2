@@ -162,3 +162,16 @@ describe('memory-game checkuserselection', function () {
     assert.equal(newgame.selectedid2, null)
   })
 })
+
+describe('memory-game checkuserselection', function () {
+  it('if user choose different, value turns should add one', function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/0.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    newgame.selectedid1 = 123
+    newgame.checkuserselection(newevent)
+    assert.equal(newgame.turns, 1)
+  })
+})
