@@ -135,3 +135,17 @@ describe('memory-game makerandomarray', function () {
     if (same) { assert.fail() }
   })
 })
+
+describe('memory-game checkuserselection', function () {
+  it('it will not do anything when user select Done.png', function () {
+    var newgame = new memorygame()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/Done.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    const actual = newgame.checkuserselection(newevent)
+    assert.equal(actual, false)
+    assert.equal(newgame.selectedid1, null)
+    assert.equal(newgame.selectedid2, null)
+  })
+})
