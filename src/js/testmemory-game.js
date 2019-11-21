@@ -19,6 +19,14 @@ describe('memory-game constructor', function () {
   })
 })
 
+describe('memory-game constructor', function () {
+  it('it can call player object getplayername', function () {
+    var newgame = new memorygame()
+    newgame.playername = new mockplayer('leekinming')
+    assert.equal(newgame.playername.getplayername(), 'leekinming')
+  })
+})
+
 describe('memory-game attributeChangedCallback', function () {
   it('it will not change anything when the name is not long or width', function () {
     var newgame = new memorygame()
@@ -267,3 +275,9 @@ describe('memory-game checktheanswer', function () {
     assert.equal(select2.getAttribute('src'), 'image/0.png')
   })
 })
+
+class mockplayer extends player {
+  getplayername () {
+    return 'leekinming'
+  }
+}
