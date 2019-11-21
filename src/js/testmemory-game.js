@@ -205,3 +205,17 @@ describe('memory-game checktheanswer', function () {
     assert.equal(select2.classList[0], 'removed')
   })
 })
+
+describe('memory-game checktheanswer', function () {
+  it('it should not add new class to those html tag', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 0)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 1)
+    newgame.photonumber = [1, 2]
+    newgame.checktheanswer(select1, select2)
+    assert.equal(select1.classList.length, 0)
+    assert.equal(select2.classList.length, 0)
+  })
+})
