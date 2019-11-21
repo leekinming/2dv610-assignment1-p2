@@ -258,17 +258,3 @@ describe('memory-game checktheanswer', function () {
     assert.equal(select2.getAttribute('src'), 'image/0.png')
   })
 })
-
-describe('memory-game checkuserselection', function () {
-  it('when user choose Done.png it should return false', function () {
-    var newgame = new memorygame()
-    const newevent = new Event('click')
-    const htmlelement = document.createElement('img')
-    htmlelement.setAttribute('src', 'image/Done.png')
-    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
-    const actual = newgame.checkuserselection(newevent)
-    assert.equal(actual, false)
-    assert.equal(newgame.selectedid1, null)
-    assert.equal(newgame.selectedid2, null)
-  })
-})
