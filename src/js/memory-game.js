@@ -96,6 +96,17 @@ class memorygame extends HTMLElement {
     }
   }
 
+  checktheanswer (select1, select2) {
+    if (this.photonumber[select1.getAttribute('value')] === this.photonumber[select2.getAttribute('value')]) {
+      select1.classList.add('removed')
+      select2.classList.add('removed')
+      this.pairdone += 1
+    } else {
+      select1.setAttribute('src', 'image/0.png')
+      select2.setAttribute('src', 'image/0.png')
+    }
+  }
+
   static get observedAttributes () {
     return ['long', 'width']
   }
