@@ -10,6 +10,15 @@ describe('memory-game constructor', function () {
   })
 })
 
+describe('memory-game constructor', function () {
+  it('it will create player object when it been created', function () {
+    var newgame = new memorygame()
+    if (!newgame.playername) {
+      assert.fail()
+    }
+  })
+})
+
 describe('memory-game attributeChangedCallback', function () {
   it('it will not change anything when the name is not long or width', function () {
     var newgame = new memorygame()
