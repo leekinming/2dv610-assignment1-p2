@@ -107,6 +107,13 @@ class memorygame extends HTMLElement {
     }
   }
 
+  connectedCallback () {
+    this.generatenumberphoto()
+    this.drawgameboard()
+    this.makerandomarray()
+    this.shadowRoot.querySelector('#gameboard').addEventListener('click', (event) => { this.checkuserselection(event) })
+  }
+
   static get observedAttributes () {
     return ['long', 'width']
   }
