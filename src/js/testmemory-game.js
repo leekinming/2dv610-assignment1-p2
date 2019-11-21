@@ -219,3 +219,15 @@ describe('memory-game checktheanswer', function () {
     assert.equal(select2.classList.length, 0)
   })
 })
+
+describe('memory-game checktheanswer', function () {
+  it('the value pairdone add one when the two choose is same', function () {
+    var newgame = new memorygame()
+    const select1 = document.createElement('img')
+    select1.setAttribute('value', 2)
+    const select2 = document.createElement('img')
+    select2.setAttribute('value', 2)
+    newgame.checktheanswer(select1, select2)
+    assert.equal(newgame.pairdone, 1)
+  })
+})
