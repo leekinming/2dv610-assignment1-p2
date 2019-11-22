@@ -11,15 +11,6 @@ describe('memory-game constructor', function () {
 })
 
 describe('memory-game constructor', function () {
-  it('it will create player object when it been created', function () {
-    var newgame = new memorygame()
-    if (!newgame.playername) {
-      assert.fail()
-    }
-  })
-})
-
-describe('memory-game constructor', function () {
   it('it can call player object getplayername', function () {
     var newgame = new memorygame()
     newgame.playername = new mockplayer('leekinming')
