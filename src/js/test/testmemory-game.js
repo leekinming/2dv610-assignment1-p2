@@ -144,6 +144,16 @@ describe('memory-game makerandomarray', function () {
   })
 })
 
+describe('drawgameboard', function () {
+  it('the total number of element img should be 16', function () {
+    var newgame = new memorygame()
+    newgame.generatenumberphoto()
+    newgame.drawgameboard()
+    const gameboardlocation = newgame.shadowRoot.querySelector('#gameboard').getElementsByTagName('img')
+    assert.equal(gameboardlocation.length, 16)
+  })
+})
+
 describe('memory-game checkuserselection', function () {
   it('it will not do anything when user select Done.png', function () {
     var newgame = new memorygame()
