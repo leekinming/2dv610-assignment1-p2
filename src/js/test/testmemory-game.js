@@ -144,13 +144,24 @@ describe('memory-game makerandomarray', function () {
   })
 })
 
-describe('drawgameboard', function () {
+describe('memory-game drawgameboard', function () {
   it('the total number of element img should be 16', function () {
     var newgame = new memorygame()
     newgame.generatenumberphoto()
     newgame.drawgameboard()
     const gameboardlocation = newgame.shadowRoot.querySelector('#gameboard').getElementsByTagName('img')
     assert.equal(gameboardlocation.length, 16)
+  })
+})
+
+describe('memory-game drawgameboard', function () {
+  it('the total number of element br should be 4 if the size of game board is default', function () {
+    var newgame = new memorygame()
+    newgame.generatenumberphoto()
+    newgame.drawgameboard()
+    const gameboardlocation = newgame.shadowRoot.querySelector('#gameboard').getElementsByTagName('br')
+    const totalbrelement = newgame.long
+    assert.equal(gameboardlocation.length, totalbrelement)
   })
 })
 
