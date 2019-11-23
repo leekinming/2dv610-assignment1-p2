@@ -165,6 +165,18 @@ describe('memory-game drawgameboard', function () {
   })
 })
 
+describe('memry-game drawgameboard', function () {
+  it('the total number of element br should be 3 if the width is 4 and long 3', function () {
+    var newgame = new memorygame()
+    newgame.attributeChangedCallback('long', 4, 3)
+    newgame.generatenumberphoto()
+    newgame.drawgameboard()
+    const gameboardlocation = newgame.shadowRoot.querySelector('#gameboard').getElementsByTagName('br')
+    const totalbrelement = newgame.long
+    assert.equal(gameboardlocation.length, totalbrelement)
+  })
+})
+
 describe('memory-game checkuserselection', function () {
   it('it will not do anything when user select Done.png', function () {
     var newgame = new memorygame()
