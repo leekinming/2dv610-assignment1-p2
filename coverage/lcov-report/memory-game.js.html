@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for memory-game.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> memory-game.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>65/78</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>28/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.23% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.72% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>61/72</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const {player} = require('./player.js')
+var template = document.createElement('template')
+template.innerHTML = /* HTML */
+`
+&lt;style&gt;
+td{
+    border:6px solid #9b3b00;
+    width:30px;
+    
+}
+.removed{
+  visibility: hidden;
+}
+&lt;/style&gt;
+&lt;table id = 'gameboard'&gt;
+&lt;/table&gt;
+`
+&nbsp;
+&nbsp;
+class memorygame extends HTMLElement {
+  constructor () {
+    super()
+    this.width = 4
+    this.long = 4
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    this.totalnumberofphoto = 0
+    this.photonumber = []
+    this.origanalphotonumber = []
+    this.temp = 0
+    this.selectedid1 = null
+    this.selectedid2 = null
+    this.turns = 0
+    this.pairdone = 0
+    this.playername = new player()
+  }
+&nbsp;
+  generatenumberphoto () {
+    for (let i = 1; i &lt;= (this.long * this.width) / 2; i++) {
+      this.photonumber.push(i)
+      this.photonumber.push(i)
+      this.origanalphotonumber.push(i)
+      this.origanalphotonumber.push(i)
+    }
+  }
+&nbsp;
+  makerandomarray () {
+    let issame = true
+    while (issame) {
+      this.photonumber.sort(function (a, b) {
+        return Math.floor(Math.random() * 3 - 1)
+      })
+&nbsp;
+      let j = 0
+      for (let i = 0; i &lt; this.photonumber.length; i++) {
+        if (this.photonumber[i] !== this.origanalphotonumber[j]) {
+          issame = false
+        }
+        j++
+      }
+    }
+  }
+&nbsp;
+  drawgameboard () {
+    const shadowRootlocation = this.shadowRoot.querySelector('#gameboard')
+    const width = this.width
+    this.photonumber.forEach(function (number, index) {
+      const img = document.createElement('img')
+      img.setAttribute('src', 'image/0.png')
+      img.setAttribute('value', index)
+      shadowRootlocation.appendChild(img)
+&nbsp;
+      if ((index + 1) % width === 0) {
+        shadowRootlocation.appendChild(document.createElement('br'))
+      }
+    })
+  }
+&nbsp;
+  checkuserselection (event) {
+    if (event.target.getAttribute('src') === null) { return }
+    event.target.setAttribute('src', `image/${this.photonumber[event.target.getAttribute('value')]}.png`)
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.selectedid2) { <span class="cstat-no" title="statement not covered" >return </span>}
+    if (this.selectedid1 === null) {
+      this.selectedid1 = event.target
+    } else {
+      if (event.target === this.selectedid1) { return }
+      this.turns += 1
+      this.selectedid2 = event.target
+      setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.checktheanswer(this.selectedid1, this.selectedid2)</span>
+<span class="cstat-no" title="statement not covered" >        this.selectedid1 = null</span>
+<span class="cstat-no" title="statement not covered" >        this.selectedid2 = null</span>
+<span class="cstat-no" title="statement not covered" >        if (this.pairdone === (this.width * this.long) / 2) {</span>
+<span class="cstat-no" title="statement not covered" >          console.log(`${this.playername.getplayername()} won`)</span>
+        }
+      }, 300)
+    }
+  }
+&nbsp;
+  checktheanswer (select1, select2) {
+    if (this.photonumber[select1.getAttribute('value')] === this.photonumber[select2.getAttribute('value')]) {
+      select1.classList.add('removed')
+      select2.classList.add('removed')
+      this.pairdone += 1
+    } else {
+      select1.setAttribute('src', 'image/0.png')
+      select2.setAttribute('src', 'image/0.png')
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>nnectedCallback () {
+<span class="cstat-no" title="statement not covered" >    this.generatenumberphoto()</span>
+<span class="cstat-no" title="statement not covered" >    this.drawgameboard()</span>
+<span class="cstat-no" title="statement not covered" >    this.makerandomarray()</span>
+<span class="cstat-no" title="statement not covered" >    this.shadowRoot.querySelector('#gameboard').addEventListener('click', <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; { <span class="cstat-no" title="statement not covered" >this.checkuserselection(event) </span>})</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  st</span>atic get observedAttributes () {
+<span class="cstat-no" title="statement not covered" >    return ['long', 'width', 'playername']</span>
+  }
+&nbsp;
+  attributeChangedCallback (name, oldvalue, newvalue) {
+    if (name === 'long') {
+      if (newvalue &lt;= 16 &amp;&amp; newvalue &gt; 0 &amp;&amp; this.width * newvalue &lt;= 16) { this.long = newvalue }
+    }
+    if (name === 'width') {
+      if (newvalue &lt;= 16 &amp;&amp; newvalue &gt; 0 &amp;&amp; this.long * newvalue &lt;= 16) { this.width = newvalue }
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (name === 'playername') {
+<span class="cstat-no" title="statement not covered" >      this.playername.setplayername(newvalue)</span>
+    }
+  }
+}
+&nbsp;
+// window.customElements.define('memory-board', memorygame)
+&nbsp;
+module.exports = {memorygame}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 25 2019 19:49:59 GMT+0100 (Central European Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

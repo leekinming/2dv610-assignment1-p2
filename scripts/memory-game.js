@@ -1,3 +1,4 @@
+const {player} = require('./player.js')
 var template = document.createElement('template')
 template.innerHTML = /* HTML */
 `
@@ -14,6 +15,7 @@ td{
 <table id = 'gameboard'>
 </table>
 `
+
 
 class memorygame extends HTMLElement {
   constructor () {
@@ -75,7 +77,7 @@ class memorygame extends HTMLElement {
   }
 
   checkuserselection (event) {
-    if (event.target.getAttribute('src') === 'image/Done.png') { return false }
+    if (event.target.getAttribute('src') === null) { return }
     event.target.setAttribute('src', `image/${this.photonumber[event.target.getAttribute('value')]}.png`)
     if (this.selectedid2) { return }
     if (this.selectedid1 === null) {
@@ -130,4 +132,6 @@ class memorygame extends HTMLElement {
   }
 }
 
-window.customElements.define('memory-board', memorygame)
+// window.customElements.define('memory-board', memorygame)
+
+module.exports = {memorygame}
