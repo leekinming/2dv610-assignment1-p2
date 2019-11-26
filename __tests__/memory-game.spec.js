@@ -150,6 +150,18 @@ describe('memory-game attributeChangedCallback', function () {
   })
 })
 
+describe('memory-game attributeChangedCallback', function () {
+  it('the player setplayername will be call', function () {
+    var newgame = new ParentMockclass()
+    newgame.playername = new mockplayer()
+    const mockfunction = jest.fn(newgame.playername.setplayername())
+    newgame.attributeChangedCallback('playername', 'player', 'leekinming')
+    // assert.equal(newgame.long, 4)
+    // assert.equal(newgame.width, 4)
+    expect(mockfunction.mock.calls.length).toEqual(1)
+  })
+})
+
 describe('memory-game generatenumberphoto', function () {
   it('the size of photonumber should be 16', function () {
     var newgame = new ParentMockclass()
