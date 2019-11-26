@@ -204,7 +204,7 @@ describe('memory-game checkuserselection', function () {
     // assert.equal(actual, false)
     // assert.equal(newgame.selectedid1, null)
     // assert.equal(newgame.selectedid2, null)
-    expect(actual).toEqual(null)
+    expect(actual).toEqual(undefined)
     expect(newgame.selectedid1).toEqual(null)
     expect(newgame.selectedid2).toEqual(null)
   })

@@ -6,7 +6,7 @@ const{player}=require('../scripts/player.js')
 describe('player constructor', function () {
   it('it will not use default playername when you have given it', function () {
     var newplayer = new player(123)
-    expect(newplayer.getplayername()).toEqual('123')
+    expect(newplayer.getplayername()).toEqual(123)
   })
 })
 

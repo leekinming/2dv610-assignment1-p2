@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1574707800093" clover="3.2.0">
-  <project timestamp="1574707800094" name="All files">
+<coverage generated="1574765990411" clover="3.2.0">
+  <project timestamp="1574765990412" name="All files">
     <metrics statements="76" coveredstatements="65" conditionals="33" coveredconditionals="29" methods="16" coveredmethods="12" elements="125" coveredelements="106" complexity="0" loc="76" ncloc="76" packages="1" files="2" classes="2">
-      <file name="memory-game.js" path="F:\test file\test-js-example-master\scripts\memory-game.js">
+      <file name="memory-game.js" path="C:\Users\Angelica\Desktop\Introduction of Web Programming\software testing\assignment1-p2\2dv610-assignment1-p2\scripts\memory-game.js">
         <metrics statements="72" coveredstatements="61" conditionals="32" coveredconditionals="28" methods="13" coveredmethods="9"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -28,13 +28,13 @@
         <line num="43" count="34" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
-        <line num="50" count="3" type="stmt"/>
-        <line num="51" count="11" type="stmt"/>
-        <line num="54" count="3" type="stmt"/>
-        <line num="55" count="3" type="stmt"/>
-        <line num="56" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="57" count="2" type="stmt"/>
-        <line num="59" count="12" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
         <line num="65" count="3" type="stmt"/>
         <line num="66" count="3" type="stmt"/>
         <line num="67" count="3" type="stmt"/>
@@ -77,7 +77,7 @@
         <line num="130" count="0" type="stmt"/>
         <line num="137" count="1" type="stmt"/>
       </file>
-      <file name="player.js" path="F:\test file\test-js-example-master\scripts\player.js">
+      <file name="player.js" path="C:\Users\Angelica\Desktop\Introduction of Web Programming\software testing\assignment1-p2\2dv610-assignment1-p2\scripts\player.js">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="3" count="32" type="stmt"/>
         <line num="7" count="4" type="stmt"/>
