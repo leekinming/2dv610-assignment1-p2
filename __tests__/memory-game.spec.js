@@ -287,6 +287,21 @@ describe('memory-game checkuserselection', async function () {
   })
 })
 
+describe('memory-game checkuserselection', function () {
+  it('when selectedid1 and selectedid2 is not null, the new user selection should not been record', function () {
+    var newgame = new ParentMockclass()
+    const newevent = new Event('click')
+    const htmlelement = document.createElement('img')
+    htmlelement.setAttribute('src', 'image/0.png')
+    Object.defineProperty(newevent, 'target', { value: htmlelement, enumerable: true })
+    newgame.selectedid1 = 123
+    newgame.selectedid2 = 123
+    newgame.checkuserselection(newevent)
+    expect(newgame.selectedid1).toEqual(123)
+    expect(newgame.selectedid2).toEqual(123)
+  })
+})
+
 describe('memory-game checktheanswer', function () {
   it('it should add new class to those html tag if two selection is match', function () {
     var newgame = new ParentMockclass()

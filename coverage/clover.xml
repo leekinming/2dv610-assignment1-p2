@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1574767728932" clover="3.2.0">
-  <project timestamp="1574767728932" name="All files">
-    <metrics statements="76" coveredstatements="66" conditionals="33" coveredconditionals="30" methods="16" coveredmethods="12" elements="125" coveredelements="108" complexity="0" loc="76" ncloc="76" packages="1" files="2" classes="2">
+<coverage generated="1574894073400" clover="3.2.0">
+  <project timestamp="1574894073400" name="All files">
+    <metrics statements="76" coveredstatements="66" conditionals="33" coveredconditionals="31" methods="16" coveredmethods="12" elements="125" coveredelements="109" complexity="0" loc="76" ncloc="76" packages="1" files="2" classes="2">
       <file name="memory-game.js" path="C:\Users\Angelica\Desktop\Introduction of Web Programming\software testing\assignment1-p2\2dv610-assignment1-p2\scripts\memory-game.js">
-        <metrics statements="72" coveredstatements="62" conditionals="32" coveredconditionals="29" methods="13" coveredmethods="9"/>
+        <metrics statements="72" coveredstatements="62" conditionals="32" coveredconditionals="30" methods="13" coveredmethods="9"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="22" count="28" type="stmt"/>
-        <line num="23" count="28" type="stmt"/>
-        <line num="24" count="28" type="stmt"/>
-        <line num="25" count="28" type="stmt"/>
-        <line num="26" count="28" type="stmt"/>
-        <line num="27" count="28" type="stmt"/>
-        <line num="28" count="28" type="stmt"/>
-        <line num="29" count="28" type="stmt"/>
-        <line num="30" count="28" type="stmt"/>
-        <line num="31" count="28" type="stmt"/>
-        <line num="32" count="28" type="stmt"/>
-        <line num="33" count="28" type="stmt"/>
-        <line num="34" count="28" type="stmt"/>
-        <line num="35" count="28" type="stmt"/>
+        <line num="22" count="29" type="stmt"/>
+        <line num="23" count="29" type="stmt"/>
+        <line num="24" count="29" type="stmt"/>
+        <line num="25" count="29" type="stmt"/>
+        <line num="26" count="29" type="stmt"/>
+        <line num="27" count="29" type="stmt"/>
+        <line num="28" count="29" type="stmt"/>
+        <line num="29" count="29" type="stmt"/>
+        <line num="30" count="29" type="stmt"/>
+        <line num="31" count="29" type="stmt"/>
+        <line num="32" count="29" type="stmt"/>
+        <line num="33" count="29" type="stmt"/>
+        <line num="34" count="29" type="stmt"/>
+        <line num="35" count="29" type="stmt"/>
         <line num="39" count="6" type="stmt"/>
         <line num="40" count="34" type="stmt"/>
         <line num="41" count="34" type="stmt"/>
@@ -28,13 +28,13 @@
         <line num="43" count="34" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="51" count="8" type="stmt"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="56" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="51" count="11" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="12" type="cond" truecount="2" falsecount="0"/>
         <line num="57" count="2" type="stmt"/>
-        <line num="59" count="8" type="stmt"/>
+        <line num="59" count="12" type="stmt"/>
         <line num="65" count="3" type="stmt"/>
         <line num="66" count="3" type="stmt"/>
         <line num="67" count="3" type="stmt"/>
@@ -44,9 +44,9 @@
         <line num="71" count="44" type="stmt"/>
         <line num="73" count="44" type="cond" truecount="2" falsecount="0"/>
         <line num="74" count="11" type="stmt"/>
-        <line num="80" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="81" count="4" type="stmt"/>
-        <line num="82" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="80" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="81" count="5" type="stmt"/>
+        <line num="82" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="83" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="84" count="1" type="stmt"/>
         <line num="86" count="3" type="cond" truecount="2" falsecount="0"/>
@@ -79,7 +79,7 @@
       </file>
       <file name="player.js" path="C:\Users\Angelica\Desktop\Introduction of Web Programming\software testing\assignment1-p2\2dv610-assignment1-p2\scripts\player.js">
         <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="3" count="34" type="stmt"/>
+        <line num="3" count="35" type="stmt"/>
         <line num="7" count="4" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
